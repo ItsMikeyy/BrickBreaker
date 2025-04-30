@@ -1,2 +1,2 @@
 # BrickBreaker
-Brick Breaker game in godot
+Brick Breaker game in Godot
