@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dvwxh4c2sr4ri"]
+
+[ext_resource type="PackedScene" uid="uid://uge3nll2l7pn" path="res://Scenes/Paddle.tscn" id="1_j5yw3"]
+[ext_resource type="PackedScene" uid="uid://dg4bywobasssq" path="res://Scenes/Boundary.tscn" id="2_kldst"]
+[ext_resource type="PackedScene" uid="uid://cwg2vb2h4tkto" path="res://Scenes/Ball.tscn" id="3_b2bpf"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Paddle" parent="." instance=ExtResource("1_j5yw3")]
+position = Vector2(358, 1111)
+scale = Vector2(4, 2)
+
+[node name="boundary" parent="." instance=ExtResource("2_kldst")]
+
+[node name="boundary2" parent="." instance=ExtResource("2_kldst")]
+rotation = -1.5708
+
+[node name="boundary3" parent="." instance=ExtResource("2_kldst")]
+position = Vector2(720, 3)
+rotation = 1.5708
+
+[node name="Ball" parent="." instance=ExtResource("3_b2bpf")]
+position = Vector2(359, 1063)
