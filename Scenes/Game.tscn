@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://dvwxh4c2sr4ri"]
+[gd_scene load_steps=6 format=3 uid="uid://dvwxh4c2sr4ri"]
 
 [ext_resource type="PackedScene" uid="uid://uge3nll2l7pn" path="res://Scenes/Paddle.tscn" id="1_j5yw3"]
 [ext_resource type="PackedScene" uid="uid://dg4bywobasssq" path="res://Scenes/Boundary.tscn" id="2_kldst"]
 [ext_resource type="PackedScene" uid="uid://cwg2vb2h4tkto" path="res://Scenes/Ball.tscn" id="3_b2bpf"]
+[ext_resource type="PackedScene" uid="uid://bbpgh0hbwb6my" path="res://Scenes/Brick.tscn" id="4_kldst"]
+[ext_resource type="Texture2D" uid="uid://vryujf0nbl3f" path="res://Assets/Sprites/brick1.png" id="5_b2bpf"]
 
 [node name="Game" type="Node2D"]
 
@@ -21,3 +23,17 @@ rotation = 1.5708
 
 [node name="Ball" parent="." instance=ExtResource("3_b2bpf")]
 position = Vector2(359, 1063)
+
+[node name="Bricks" type="Node" parent="."]
+
+[node name="Brick" parent="Bricks" instance=ExtResource("4_kldst")]
+position = Vector2(115, 260)
+brick_texture = ExtResource("5_b2bpf")
+
+[node name="Brick2" parent="Bricks" instance=ExtResource("4_kldst")]
+position = Vector2(230, 263)
+brick_texture = ExtResource("5_b2bpf")
+
+[node name="Brick3" parent="Bricks" instance=ExtResource("4_kldst")]
+position = Vector2(435, 255)
+brick_texture = ExtResource("5_b2bpf")
