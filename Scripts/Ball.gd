@@ -13,3 +13,8 @@ func _input(event: InputEvent) -> void:
 func _physics_process(delta):
 	linear_velocity = linear_velocity.normalized() * BALL_SPEED
 	
+
+
+func _on_body_entered(body: Node) -> void:
+	if body is Brick:
+		body.queue_free()
